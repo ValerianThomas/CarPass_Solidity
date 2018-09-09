@@ -46,7 +46,7 @@ struct KillometerCheck {
 
 ## Methods
 
-1 createNewCarPass 
+#### 1 createNewCarPass 
 
 ```
 function createNewCarPass(string _chassisNumber, uint32 _yearEntryIntoCirculation, string _carModel, string _carBrand, address _ownerAddress) noCarpassForChassisNumber( _chassisNumber ) public {
@@ -57,7 +57,7 @@ function createNewCarPass(string _chassisNumber, uint32 _yearEntryIntoCirculatio
 
 Lets you create a brand-new CarPass with few parameters: the chassis number of the vehicle, the year of entry, the car model, the car brand and the owner address
 
-2 addKilometerCheck 
+#### 2 addKilometerCheck 
 
 ```
 function addKilometerCheck (string _chassisNumber, uint32 _kilometers ) onlyOracle carPassMustExist(_chassisNumber) valideKilometer(_chassisNumber, _kilometers) public {
@@ -70,7 +70,7 @@ function addKilometerCheck (string _chassisNumber, uint32 _kilometers ) onlyOrac
 
 Lets Oracles create new mileage check. 
 
-3 createOracle
+#### 3 createOracle
 
 ```
 function createOracle(address newOracle) external onlyOwner {
@@ -81,7 +81,7 @@ function createOracle(address newOracle) external onlyOwner {
 
 Lets the smart contract owner creates new Oracles
 
-4 seeCarPass
+#### 4 seeCarPass
 
 ```
 function seeCarPass(string _chassisNumber) carPassMustExist(_chassisNumber) external view returns(string, string,address, uint[]) {
@@ -96,7 +96,7 @@ function seeCarPass(string _chassisNumber) carPassMustExist(_chassisNumber) exte
 
 Lets any user see the details of a specic CarPass from the chassis Number
 
-5 seeParticularCheck 
+#### 5 seeParticularCheck 
 
 ```
 function seeParticularCheck (string _chassisNumber, uint8 _checkId) carPassMustExist(_chassisNumber) external view returns(uint, uint32, address) {
@@ -106,7 +106,7 @@ function seeParticularCheck (string _chassisNumber, uint8 _checkId) carPassMustE
 
 Lets any user check the specs of a particular kilometer check from specific CarPass
 
-6 changeCarOwner
+#### 6 changeCarOwner
 
 ```
 function changeCarOwner(string _chassisNumber, address _newOwner) onlyCarOwner(_chassisNumber) external {
