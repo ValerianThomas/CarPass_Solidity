@@ -115,4 +115,4 @@ function changeCarOwner(string _chassisNumber, address _newOwner) onlyCarOwner(_
 }
 ```
 
-Lets car owners to transfer ownership to a new person
+Lets car owners transfer ownership to a new person
